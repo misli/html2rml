@@ -1,0 +1,10 @@
+*.egg-info
+*.pyc
+*.pyo
+*.swp
+*~
+/.*
+!.bumpversion.cfg
+!.gitignore
+/build
+/dist
