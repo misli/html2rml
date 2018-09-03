@@ -56,7 +56,7 @@ class HTML2RMLConverter(HTMLParser):
             super(HTML2RMLConverter, self).__init__(*args, **kwargs)
         self.reset()
         self.tokens = []
-    
+
     def handle_data(self, d):
         self.tokens.append(d)
 
@@ -68,9 +68,17 @@ class HTML2RMLConverter(HTMLParser):
         rml_attrs = self.rml_attributes.get(html_tag)
         if rml_tag:
             if rml_tag in self.empty_tags:
-                self.tokens.append('<%s %s/>' % (rml_tag, rml_attrs) if rml_attrs else '<%s/>' % rml_tag)
+                self.tokens.append(
+                    '<%s %s/>' % (rml_tag, rml_attrs)
+                    if rml_attrs
+                    else '<%s/>' % rml_tag
+                )
             else:
-                self.tokens.append('<%s %s>' % (rml_tag, rml_attrs) if rml_attrs else '<%s>' % rml_tag)
+                self.tokens.append(
+                    '<%s %s>' % (rml_tag, rml_attrs)
+                    if rml_attrs
+                    else '<%s>' % rml_tag
+                )
 
     def handle_endtag(self, html_tag):
         rml_tag = self.rml_tags.get(html_tag)
