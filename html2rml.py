@@ -18,6 +18,7 @@ rml_tags = {
     'b': 'b',
     'strong': 'b',
     'i': 'i',
+    'em': 'i',
     'sub': 'sub',
     'sup': 'super',
     # tables
