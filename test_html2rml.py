@@ -15,9 +15,13 @@ def test_html2rml():
             <li>item 1</li>
             <li>item 2</li>
         </ul>
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+        </ol>
     '''
     rml = '''
-        <para>
+        <para style="p">
             This is text of simple paragraph.<br/> Some words are <b>bold</b>,
             some <b>strong</b>, some <i>italics</i>
         </para>
@@ -25,9 +29,13 @@ def test_html2rml():
             <tr><td>Table header</td></tr>
             <tr><td>Table value</td></tr>
         </blockTable>
-        <ul>
-            <li>item 1</li>
-            <li>item 2</li>
+        <ul style="ul">
+            <li style="li">item 1</li>
+            <li style="li">item 2</li>
+        </ul>
+        <ul style="ol">
+            <li style="li">item 1</li>
+            <li style="li">item 2</li>
         </ul>
     '''
     assert html2rml(html) == rml
