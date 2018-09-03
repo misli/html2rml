@@ -28,7 +28,7 @@ rml_tags = {
     'th': 'td',
     # lists
     'ul': 'ul',
-    'ol': 'ol',
+    'ol': 'ul',
     'li': 'li',
     # others
     'br': 'br',
