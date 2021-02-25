@@ -9,4 +9,5 @@ Installation with pip
 ---------------------
 
 .. code:: shell
+
     pip install html2rml
