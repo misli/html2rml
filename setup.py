@@ -10,7 +10,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 
 setup(
     name='html2rml',
-    version='0.3.1',
+    version='0.3.2',
     description='Simple HTML to RML converter',
     long_description=long_description,
     author='Jakub Dorňák',
